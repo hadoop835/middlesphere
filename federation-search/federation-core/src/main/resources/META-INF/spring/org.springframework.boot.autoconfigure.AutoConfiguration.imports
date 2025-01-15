@@ -1,0 +1,2 @@
+io.middlesphere.federation.spring.autoconfigure.FederationAutoConfiguration
+io.middlesphere.federation.spring.autoconfigure.FederationMybatisAutoConfiguration

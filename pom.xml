@@ -14,12 +14,15 @@
         <guava.version>33.3.1-jre</guava.version>
         <lang3.version>3.17.0</lang3.version>
         <transmittable.version>2.14.5</transmittable.version>
+        <slf4j.version>2.0.16</slf4j.version>
+        <fastjson.version>2.0.54</fastjson.version>
     </properties>
 
     <modules>
         <module>search</module>
         <module>mybatis</module>
         <module>access</module>
+        <module>federation-search</module>
     </modules>
 
     <dependencyManagement>
@@ -47,6 +50,19 @@
                 <groupId>io.middlesphere</groupId>
                 <artifactId>middlesphere-access</artifactId>
                 <version>${project.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/com.alibaba.fastjson2/fastjson2 -->
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+                <version>${fastjson.version}</version>
             </dependency>
 
         </dependencies>

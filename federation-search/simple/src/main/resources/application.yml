@@ -1,0 +1,24 @@
+federation:
+  config:
+    case-sensitive: false
+    jdbc-config:
+      schemas:
+        - factory: org.apache.calcite.adapter.jdbc.JdbcSchema$Factory
+          name: test1
+          type: custom
+          operand:
+            jdbc-url: jdbc:mysql://localhost:3306/test1
+            jdbc-driver: com.mysql.cj.jdbc.Driver
+            jdbc-user: root
+            jdbc-password: root
+        - factory: org.apache.calcite.adapter.jdbc.JdbcSchema$Factory
+          name: public
+          type: custom
+          operand:
+            jdbc-url: jdbc:postgresql://localhost:5432/postgres
+            jdbc-driver: org.postgresql.Driver
+            jdbc-user: postgres
+            jdbc-password: root
+    mybatis:
+      mapper-locations: classpath:mapper/*.xml
+
